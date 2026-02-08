@@ -1,13 +1,31 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Lexend_Giga,
+  Lexend_Zetta,
+  Saira,
+} from "next/font/google";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+config.autoAddCss = false; // do NOT add CSS to fontAwesome automatically
+
+const lexendGiga = Lexend_Giga({
+  variable: "--font-lexend-giga",
+  weight: "variable",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lexendZetta = Lexend_Zetta({
+  variable: "--font-lexend-zetta",
+  weight: "variable",
+  subsets: ["latin"],
+});
+
+const saira = Saira({
+  variable: "--font-saira-sans",
+  weight: "variable",
   subsets: ["latin"],
 });
 
@@ -20,7 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lexendGiga.variable} ${lexendZetta.variable} ${saira.variable} antialiased`}
       >
         {children}
       </body>

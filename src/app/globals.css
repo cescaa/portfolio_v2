@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /*fonts*/
+  --font-primary: var(--font-lexend-giga);
+  --font-secondary: var(--font-saira-sans);
+  --font-tertiary: var(--font-lexend-zetta);
+
+  /* colours */
+  --color-primary: #e9d73c;
+  --color-secondary: #fff; /* e2e3d8 */
+  --color-tertiary: #7fff00 /*c4fe2a*/;
+  --color-accent: #f077f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #306bf4; /*#4b7bec #19720f*/
+    --foreground: #001c00;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-secondary);
+  }
+
+  h1 {
+    @apply text-6xl text-secondary font-tertiary font-bold mb-8;
+  }
+
+  h1 .h1span {
+    @apply text-6xl text-accent font-tertiary font-bold mb-8;
+  }
+
+  h2 {
+    @apply text-4xl text-accent font-primary font-bold mb-4 uppercase;
+  }
+
+  .heroText {
+    font-family: var(--font-lexend-zetta);
+    font-weight: 900;
+    font-size: 9rem;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    fill: #7fff00;
+    stroke: var(--color-foreground);
+    stroke-width: 1px;
+    paint-order: stroke; /* draw stroke cleanly */
+    stroke-linejoin: round; /* smooth corners */
+  }
 }
