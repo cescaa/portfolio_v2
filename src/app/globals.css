@@ -12,7 +12,7 @@
   /* colours */
   --color-primary: #e9d73c;
   --color-secondary: #fff; /* e2e3d8 */
-  --color-tertiary: #7fff00 /*c4fe2a*/;
+  --color-tertiary: #7fff00 /*c4fe2a - 7fff00*/;
   --color-accent: #f077f9;
 }
 
@@ -49,19 +49,40 @@
   }
 
   h2 {
-    @apply text-4xl text-accent font-primary font-bold mb-4 uppercase;
+    @apply text-4xl text-tertiary font-primary font-bold mb-4 uppercase;
+  }
+
+  .projectCard h2 {
+    @apply text-foreground capitalize text-center;
+  }
+
+  /* hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   .heroText {
     font-family: var(--font-lexend-zetta);
     font-weight: 900;
-    font-size: 9rem;
+    font-size: 8rem;
     letter-spacing: 0;
     text-transform: uppercase;
-    fill: #7fff00;
     stroke: var(--color-foreground);
-    stroke-width: 1px;
-    paint-order: stroke; /* draw stroke cleanly */
+    stroke-width: 1.5px;
+    paint-order: stroke;
     stroke-linejoin: round; /* smooth corners */
+  }
+
+  .pagePadding {
+    @apply px-8 py-24;
+  }
+
+  .secondPagePadding {
+    @apply p-8;
   }
 }

@@ -8,6 +8,7 @@ import {
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "./globals.css";
+import MainMenu from "./components/MainMenu";
 
 config.autoAddCss = false; // do NOT add CSS to fontAwesome automatically
 
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${lexendGiga.variable} ${lexendZetta.variable} ${saira.variable} antialiased`}
       >
+        <MainMenu />
         {children}
       </body>
     </html>
