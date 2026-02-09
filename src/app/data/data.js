@@ -3,6 +3,12 @@ export const educationData = [
   "Interaction Design (Honours) — Sheridan College",
 ];
 
+export const contactData = [
+  "github.com/cescaa",
+  " linkedin.com/in/cescaa",
+  "cesca.html@gmail.com",
+];
+
 export const projects = [
   {
     id: "american-tradition",

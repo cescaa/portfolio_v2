@@ -73,13 +73,13 @@
     letter-spacing: 0;
     text-transform: uppercase;
     stroke: var(--color-foreground);
-    stroke-width: 1.5px;
+    stroke-width: 2px;
     paint-order: stroke;
     stroke-linejoin: round; /* smooth corners */
   }
 
   .pagePadding {
-    @apply px-8 py-24;
+    @apply px-8 pt-24 pb-8;
   }
 
   .secondPagePadding {

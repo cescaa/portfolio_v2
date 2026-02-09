@@ -5,7 +5,7 @@ export default function LandingList({ title, listData = [] }) {
       <ul className="space-y-2">
         {listData.map((elem, i) => {
           return (
-            <li key={i} className="text-2xl font-secondary">
+            <li key={i} className="text-2xl font-secondary xl:text-4xl">
               {elem}
             </li>
           );
