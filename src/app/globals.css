@@ -11,9 +11,13 @@
 
   /* colours */
   --color-primary: #e9d73c;
-  --color-secondary: #fff; /* e2e3d8 */
+  --color-secondary: #e2e3d8; /* e2e3d8 */
   --color-tertiary: #7fff00 /*c4fe2a - 7fff00*/;
   --color-accent: #f077f9;
+}
+
+@theme {
+  --breakpoint-3xl: 100rem;
 }
 
 @layer base {
@@ -49,11 +53,19 @@
   }
 
   h2 {
-    @apply text-4xl text-tertiary font-primary font-bold mb-4 uppercase;
+    @apply text-4xl text-tertiary font-primary mb-4 uppercase font-bold;
   }
 
   .projectCard h2 {
-    @apply text-foreground capitalize text-center;
+    @apply text-foreground capitalize text-center font-bold;
+  }
+
+  h3 {
+    @apply text-3xl text-foreground font-primary mb-4;
+  }
+
+  p {
+    @apply text-2xl font-secondary;
   }
 
   /* hide scrollbar */
@@ -79,10 +91,10 @@
   }
 
   .pagePadding {
-    @apply px-8 pt-24 pb-8;
+    @apply px-8 pt-24 pb-16;
   }
 
   .secondPagePadding {
-    @apply p-8;
+    @apply py-8 px-8 pb-16;
   }
 }

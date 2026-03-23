@@ -6,7 +6,7 @@ export default function MainMenu() {
     { lbl: "Contact" },
   ];
 
-  const defaultStyles = "border-primary text-primary";
+  const defaultStyles = "border-primary text-secondary bg-background";
   const secondaryStyles = "border-foreground text-foreground";
 
   return (
@@ -16,7 +16,7 @@ export default function MainMenu() {
           return (
             <li
               key={i}
-              className={`text-2xl border p-2 px-8 rounded-full shadow bg-inherit ${secondaryStyles}`}
+              className={`text-xl border p-2 px-8 rounded-full shadow ${defaultStyles}`}
             >
               {item.lbl}
             </li>
