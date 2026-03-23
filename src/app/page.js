@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAnglesUp,
   faArrowRight,
+  faArrowRightLong,
   faCode,
   faCross,
   faLayerGroup,
@@ -60,8 +61,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="secondPagePadding w-full min-h-screen bg-primary">
-        <HeroText text="Projects" align="center" />
+      <div className="secondPagePadding w-full min-h-screen bg-background">
+        <HeroText text="Projects" align="left" />
 
         <div className="w-full pb-8 font-primary font-light z-50">
           <ul className="flex gap-4 justify-center">
@@ -69,7 +70,7 @@ export default function Home() {
               return (
                 <li
                   key={i}
-                  className={`text-xl border p-2 px-8 rounded-full shadow border-background text-foreground bg-secondary`}
+                  className={`text-xl border p-2 px-8 rounded-full shadow border-accent text-foreground bg-accent cursor-pointer`}
                 >
                   {item}
                 </li>
@@ -82,7 +83,7 @@ export default function Home() {
           {projects.map((item) => (
             <div
               key={item.id}
-              className="projectCard flex flex-col items-center gap-4 p-8 py-12  border border-background hover:bg-secondary cursor-pointer"
+              className="relative projectCard flex flex-col items-center gap-4 p-8 pt-8 py-16  border border-accent hover:bg-secondary cursor-pointer"
             >
               <div>
                 <h2>{item.title}</h2>
@@ -126,8 +127,11 @@ export default function Home() {
                   className="w-full"
                 />
               </div>
-              <div>
-                <p>See More</p>
+              <div className="absolute bottom-4 right-4 flex gap-2 text-primary border border-primary py-1 px-4 rounded-full shadow">
+                <FontAwesomeIcon
+                  icon={faArrowRightLong}
+                  className="text-secondary text-3xl"
+                />
               </div>
             </div>
           ))}

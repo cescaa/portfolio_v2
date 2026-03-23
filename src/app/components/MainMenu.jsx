@@ -3,7 +3,6 @@ export default function MainMenu() {
     { lbl: "About Me" },
     { lbl: "Projects" },
     { lbl: "Resume" },
-    { lbl: "Contact" },
   ];
 
   const defaultStyles = "border-primary text-secondary bg-background";
